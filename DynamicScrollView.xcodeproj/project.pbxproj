@@ -14,6 +14,7 @@
 		894CAC12210A034300989E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894CAC10210A034300989E24 /* LaunchScreen.storyboard */; };
 		894CAC1D210A034300989E24 /* DynamicScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CAC1C210A034300989E24 /* DynamicScrollViewTests.swift */; };
 		894CAC28210A034300989E24 /* DynamicScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CAC27210A034300989E24 /* DynamicScrollViewUITests.swift */; };
+		894CAC36210A036F00989E24 /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894CAC35210A036F00989E24 /* VCExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		894CAC23210A034300989E24 /* DynamicScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894CAC27210A034300989E24 /* DynamicScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollViewUITests.swift; sourceTree = "<group>"; };
 		894CAC29210A034300989E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		894CAC35210A036F00989E24 /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				894CAC0E210A034300989E24 /* Assets.xcassets */,
 				894CAC10210A034300989E24 /* LaunchScreen.storyboard */,
 				894CAC13210A034300989E24 /* Info.plist */,
+				894CAC35210A036F00989E24 /* VCExtension.swift */,
 			);
 			path = DynamicScrollView;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				894CAC0A210A033600989E24 /* ViewController.swift in Sources */,
 				894CAC08210A033600989E24 /* AppDelegate.swift in Sources */,
+				894CAC36210A036F00989E24 /* VCExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
