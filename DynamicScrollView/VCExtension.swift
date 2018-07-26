@@ -86,7 +86,7 @@ extension ViewController {
         scrollViewImages.topAnchor.constraint(equalTo: attachmentsLabel.bottomAnchor,constant:5).isActive = true
         scrollViewImages.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).isActive = true
         scrollViewImages.widthAnchor.constraint(equalTo: descriptionTextView.widthAnchor).isActive = true
-        scrollViewImages.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        scrollViewImages.heightAnchor.constraint(equalToConstant: 0).isActive = true
         
 //        if attachmentArray.count>0{
 //            scrollViewImages.heightAnchor.constraint(equalToConstant: 180).isActive = true

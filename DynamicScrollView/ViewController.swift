@@ -43,7 +43,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         label.text = "Announcement Tital Low Attendance Hostel Block D"
         label.numberOfLines = 0
         label.sizeToFit()
-//        label.font = UIFont.sfDisplayBold(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = UIColor(red: 33.0/255.0, green: 73.0/255.0, blue: 88.0/255.0, alpha: 1)
         return label
     }()
@@ -183,6 +183,13 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         setAutolayoutConstraints()
     }
 
+    
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var pageNumber = scrollViewImages.contentOffset.x / scrollViewImages.frame.size.width
+        pageControl.currentPage = Int(pageNumber)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
