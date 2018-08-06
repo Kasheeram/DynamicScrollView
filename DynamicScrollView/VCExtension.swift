@@ -15,17 +15,20 @@ extension ViewController {
         view.addSubview(topView)
         topView.addSubview(backButton)
         view.addSubview(scrollView)
-        scrollView.addSubview(titalLabel)
-        scrollView.addSubview(postedByLabel)
-        scrollView.addSubview(profileImageView)
-        scrollView.addSubview(roleLabel)
-        scrollView.addSubview(postdOnLabel)
-        scrollView.addSubview(descriptionLabel)
-        scrollView.addSubview(descriptionTextView)
-        scrollView.addSubview(attachmentsLabel)
-        scrollView.addSubview(scrollViewImages)
-        scrollView.addSubview(pageControl)
-        scrollView.addSubview(requestMoreInfoLabel)
+        scrollView.addSubview(containerView)
+        
+        
+        containerView.addSubview(titalLabel)
+        containerView.addSubview(postedByLabel)
+        containerView.addSubview(profileImageView)
+        containerView.addSubview(roleLabel)
+        containerView.addSubview(postdOnLabel)
+        containerView.addSubview(descriptionLabel)
+        containerView.addSubview(descriptionTextView)
+        containerView.addSubview(attachmentsLabel)
+        containerView.addSubview(scrollViewImages)
+        containerView.addSubview(pageControl)
+        containerView.addSubview(requestMoreInfoLabel)
         
         topView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         topView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -42,11 +45,18 @@ extension ViewController {
         scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        titalLabel.topAnchor.constraint(equalTo: scrollView.topAnchor,constant:20).isActive = true
-        titalLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor,constant:20).isActive = true
+        containerView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+
+  
+        titalLabel.topAnchor.constraint(equalTo: containerView.topAnchor,constant:20).isActive = true
+        titalLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor,constant:20).isActive = true
         titalLabel.widthAnchor.constraint(equalTo: view.widthAnchor,constant:-40).isActive = true
-        titalLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 35).isActive = true
-        //      titalLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        titalLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 35).isActive = true
+        titalLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         postedByLabel.topAnchor.constraint(equalTo: titalLabel.bottomAnchor,constant:15).isActive = true
         postedByLabel.leadingAnchor.constraint(equalTo: titalLabel.leadingAnchor).isActive = true
@@ -86,7 +96,7 @@ extension ViewController {
         scrollViewImages.topAnchor.constraint(equalTo: attachmentsLabel.bottomAnchor,constant:5).isActive = true
         scrollViewImages.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).isActive = true
         scrollViewImages.widthAnchor.constraint(equalTo: descriptionTextView.widthAnchor).isActive = true
-        scrollViewImages.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        scrollViewImages.heightAnchor.constraint(equalToConstant: 180).isActive = true
         
 //        if attachmentArray.count>0{
 //            scrollViewImages.heightAnchor.constraint(equalToConstant: 180).isActive = true
@@ -109,11 +119,11 @@ extension ViewController {
         requestMoreInfoLabel.widthAnchor.constraint(equalTo: descriptionTextView.widthAnchor).isActive = true
         requestMoreInfoLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        if #available(iOS 11.0, *) {
-            requestMoreInfoLabel.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor,constant:-20).isActive = true
-        } else {
-            requestMoreInfoLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor,constant:-20).isActive = true
-        }
+//        if #available(iOS 11.0, *) {
+//            requestMoreInfoLabel.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor,constant:-20).isActive = true
+//        } else {
+//            requestMoreInfoLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor,constant:-20).isActive = true
+//        }
         
     }
 }

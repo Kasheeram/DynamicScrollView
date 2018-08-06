@@ -22,6 +22,14 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         return view
     }()
     
+    let containerView:UIView = {
+        let view =  UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .green
+        return view
+    }()
+    
+    
     let backButton:UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -99,6 +107,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         textView.text = "My eye will be operated and will be admitted in the hospital for 4 days. My eye will be operated and will be admitted in the hospital for 4 days."
         textView.isScrollEnabled = false
         textView.isUserInteractionEnabled = false
+        textView.layoutManager.allowsNonContiguousLayout = false
 //        textView.font = UIFont.sfDisplayRegular(ofSize: 16)
         textView.textColor = UIColor(red: 33.0/255.0, green: 73.0/255.0, blue: 88.0/255.0, alpha: 0.75)
         return textView
